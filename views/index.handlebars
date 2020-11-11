@@ -1,0 +1,52 @@
+<div class="container">
+
+  <h1 class="my-4 text-center">你想對誰說幹話?</h1>
+  <form method="POST" action="/">
+    <div class="picture d-flex justify-content-between mb-5">
+
+      <div class="imgOne">
+        <img class="border border-dark"
+          src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" alt=""
+          style="width: 350px;height: 300px">
+
+        <div class="form-check text-center mt-3">
+          <input class="form-check-input" type="radio" name="engineer" id="engineer">
+          <label class="form-check-label" for="exampleRadios1">
+            工程師
+          </label>
+        </div>
+      </div>
+
+      <div class="imgTwo">
+        <img class="border border-dark"
+          src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" alt=""
+          style="width: 350px;height: 300px">
+        <div class="form-check text-center mt-3">
+          <input class="form-check-input" type="radio" name="designer" id="designer">
+          <label class="form-check-label" for="exampleRadios1">
+            設計師
+          </label>
+        </div>
+      </div>
+
+      <div class="imgThree">
+        <img class="border border-dark"
+          src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" alt=""
+          style="width: 350px;height: 300px">
+        <div class="form-check text-center mt-3">
+          <input class="form-check-input" type="radio" name="entrepreneur" id="entrepreneur">
+          <label class="form-check-label" for="exampleRadios1">
+            創業家
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-between">
+      <div>
+        <button type="submit" class="btn btn-primary">產生幹話</button>
+      </div>
+      <textarea class="form-control" style="max-width:85%" id="exampleFormControlTextarea1"></textarea>
+    </div>
+  </form>
+</div>
