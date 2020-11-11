@@ -10,7 +10,8 @@
           style="width: 350px;height: 300px">
 
         <div class="form-check text-center mt-3">
-          <input class="form-check-input" type="radio" name="engineer" id="engineer">
+          <input class="form-check-input" type="radio" name="jobs" id="engineer" value="engineer"
+            {{#ifEqual options.jobs "engineer"}}checked{{/ifEqual}}>
           <label class="form-check-label" for="exampleRadios1">
             工程師
           </label>
@@ -22,7 +23,8 @@
           src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" alt=""
           style="width: 350px;height: 300px">
         <div class="form-check text-center mt-3">
-          <input class="form-check-input" type="radio" name="designer" id="designer">
+          <input class="form-check-input" type="radio" name="jobs" id="designer" value="designer"
+            {{#ifEqual options.jobs "designer"}}checked{{/ifEqual}}>
           <label class="form-check-label" for="exampleRadios1">
             設計師
           </label>
@@ -34,7 +36,8 @@
           src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" alt=""
           style="width: 350px;height: 300px">
         <div class="form-check text-center mt-3">
-          <input class="form-check-input" type="radio" name="entrepreneur" id="entrepreneur">
+          <input class="form-check-input" type="radio" name="jobs" id="entrepreneur" value="entrepreneur"
+            {{#ifEqual options.jobs "entrepreneur"}}checked{{/ifEqual}}>
           <label class="form-check-label" for="exampleRadios1">
             創業家
           </label>

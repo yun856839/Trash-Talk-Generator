@@ -6,8 +6,16 @@ const generateTrashTalk = require('./generate_trashtalk')
 const app = express()
 const port = 3000
 
+const ifEqual = function (selector, targets, options) {
+  if (selector === targets) return options.fn(this);
+  return options.inverse(this);
+}
+
 //set template engine
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
+app.engine('handlebars', exphbs({
+  defaultLayout: 'main',
+  helpers: { ifEqual }
+}))
 app.set('view engine', 'handlebars')
 
 // use body-parser
@@ -21,7 +29,7 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
   const options = req.body
   const trashTalk = generateTrashTalk(options)
-  res.render('index', { trashTalk })
+  res.render('index', { trashTalk, options })
 })
 
 app.listen(port, () => {

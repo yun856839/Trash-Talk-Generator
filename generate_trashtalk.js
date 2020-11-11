@@ -13,21 +13,21 @@ function generateTrashTalk(options) {
   }
   const phrase = ['很簡單', '很容易', '很快', '很正常']
 
-  if (Object.keys(options).length > 1) {
-    return `只能選一個`
-  }
+  // if (Object.keys(options).length > 1) {
+  //   return `只能選一個`
+  // }
 
   // 根據誰選的篩選出專屬 task 
   let collection = []
   let target = ''
 
-  if (options.engineer === 'on') {
+  if (options.jobs === 'engineer') {
     collection = task.engineer
     target = '工程師'
-  } else if (options.designer === 'on') {
+  } else if (options.jobs === 'designer') {
     collection = task.designer
     target = '設計師'
-  } else if (options.entrepreneur === 'on') {
+  } else if (options.jobs === 'entrepreneur') {
     collection = task.entrepreneur
     target = '創業家'
   } else {
