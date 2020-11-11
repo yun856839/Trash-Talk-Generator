@@ -1,4 +1,4 @@
-# 專案畫面 Trash-Talk-Generator
+# 專案畫面
 ![image](https://github.com/yun856839/Trash-Talk-Generator/blob/master/trashtalk.jpg)
 
 # 幹話產生器 Trash-Talk-Generator
