@@ -13,11 +13,8 @@ function generateTrashTalk(options) {
   }
   const phrase = ['很簡單', '很容易', '很快', '很正常']
 
-  //選誰(target) define dummy data
-  const options = {
-    // engineer: 'on',
-    // designer: 'on',
-    entrepreneur: 'on'
+  if (Object.keys(options).length > 1) {
+    return `只能選一個`
   }
 
   // 根據誰選的篩選出專屬 task 
@@ -33,6 +30,8 @@ function generateTrashTalk(options) {
   } else if (options.entrepreneur === 'on') {
     collection = task.entrepreneur
     target = '創業家'
+  } else {
+    return `請選擇一個`
   }
 
   // 產出幹話 start generating trashTalk  

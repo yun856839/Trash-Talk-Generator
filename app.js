@@ -19,9 +19,9 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-  console.log('req.body', req.body)
-  console.log(generateTrashTalk())
-  res.render('index')
+  const options = req.body
+  const trashTalk = generateTrashTalk(options)
+  res.render('index', { trashTalk })
 })
 
 app.listen(port, () => {
